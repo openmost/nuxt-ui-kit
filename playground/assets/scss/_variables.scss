@@ -1,3 +1,42 @@
 $custom-colors: (
   "white": #fff,
 );
+
+$body-bg-dark: #161830;
+$body-color-dark: #fff;
+
+$primary: #426CDA;
+
+$success: #48C188;
+$success-bg-subtle: rgba($success, .1);
+$success-bg-subtle-dark: rgba($success, .1);
+$success-border-subtle: $success;
+$success-border-subtle-dark: $success;
+$success-text-emphasis-dark: #fff;
+
+$info: #426CDA;
+$info-bg-subtle: rgba($info, .1);
+$info-bg-subtle-dark: rgba($info, .1);
+$info-border-subtle: $info;
+$info-border-subtle-dark: $info;
+$info-text-emphasis-dark: #fff;
+
+$warning: #FFA32A;
+$warning-bg-subtle: rgba($warning, .1);
+$warning-bg-subtle-dark: rgba($warning, .1);
+$warning-border-subtle: $warning;
+$warning-border-subtle-dark: $warning;
+$warning-text-emphasis-dark: #fff;
+
+$danger: #F84B5C;
+$danger-bg-subtle: rgba($danger, .1);
+$danger-bg-subtle-dark: rgba($danger, .1);
+$danger-border-subtle: $danger;
+$danger-border-subtle-dark: $danger;
+$danger-text-emphasis-dark: #fff;
+
+// Alert
+$alert-border-radius: 1rem;
+$alert-border-width: 2px;
+$alert-padding-x: 1.5rem;
+$alert-padding-y: 1.5rem;
