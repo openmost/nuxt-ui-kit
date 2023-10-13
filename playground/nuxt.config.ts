@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
-  myModule: {},
-  devtools: { enabled: true }
+  openmostUiKit: {},
+  devtools: { enabled: true },
+  css: ["@/assets/scss/app.scss"]
 })
