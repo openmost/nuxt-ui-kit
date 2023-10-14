@@ -1,26 +1,12 @@
 <template>
   <div class="default-layout">
-
-    <Sidebar>
-
-      <template #logo>
-        <h1>Logo</h1>
-      </template>
-
-      <Nav pills vertical>
-        <NavItem to="/" active>AB Testing</NavItem>
-        <NavItem to="/">Annotations</NavItem>
-        <NavItem to="/">Custom Alert</NavItem>
-        <NavItem to="/">Custom Dimensions</NavItem>
-        <NavItem to="/">Dashboard</NavItem>
-        <NavItem to="/">Forms</NavItem>
-      </Nav>
-    </Sidebar>
-
-    <main id="content">
-      <slot/>
-    </main>
-
+    <Sidebar/>
+    <div id="content-wrapper">
+      <Header/>
+      <main id="content">
+        <slot/>
+      </main>
+    </div>
   </div>
 </template>
 
@@ -29,8 +15,11 @@
   display: flex;
 }
 
-#content {
+#content-wrapper {
   flex-grow: 1;
+}
+
+#content {
   padding-right: 1.5rem;
 }
 </style>

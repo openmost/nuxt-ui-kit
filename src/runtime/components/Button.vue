@@ -7,7 +7,11 @@
     :is="tag"
     :type="type"
   >
+
+    <slot name="icon"/>
+
     <slot>{{ text }}</slot>
+
   </component>
 </template>
 
@@ -18,9 +22,11 @@ const props = defineProps({
   ariaLabel: {
     type: String
   },
+  circle: {
+    type: Boolean,
+  },
   disabled: {
     type: Boolean,
-    default: false,
   },
   rel: {
     type: String,
@@ -52,6 +58,39 @@ const buttonClass = computed(() => {
     'btn',
     props.size ? `btn-${props.size}` : null,
     props.variant ? `btn-${props.variant}` : null,
+    props.circle ? `btn-circle` : null,
   ]
 })
 </script>
+
+<style lang="scss">
+.btn {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: .5rem;
+
+  svg {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+
+  &[disabled] {
+    background-color: transparent;
+    color: var(--bs-secondary);
+    border-color: currentColor;
+  }
+
+  &.btn-danger {
+    color: #fff;
+  }
+
+  &.btn-circle {
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50rem;
+    aspect-ratio: 1;
+  }
+}
+</style>

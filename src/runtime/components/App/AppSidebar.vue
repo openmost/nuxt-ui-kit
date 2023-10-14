@@ -24,13 +24,13 @@ const props = defineProps({
 
 const sidebarClass = computed(() => {
   return [
-    'sidebar'
+    'app-sidebar'
   ]
 })
 </script>
 
 <style lang="scss">
-.sidebar {
+.app-sidebar {
   min-width: 312px;
   padding: 2rem 1.5rem;
 

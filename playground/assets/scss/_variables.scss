@@ -1,11 +1,15 @@
+$font-family-base: 'Sora', sans-serif;
+
 $custom-colors: (
   "white": #fff,
+  "accent": #FFA32A
 );
 
 $body-bg-dark: #161830;
 $body-color-dark: #fff;
 
 $primary: #426CDA;
+$secondary: #AEAFBB;
 
 $success: #48C188;
 $success-bg-subtle: rgba($success, .1);
@@ -40,6 +44,17 @@ $alert-border-radius: 1rem;
 $alert-border-width: 2px;
 $alert-padding-x: 1.5rem;
 $alert-padding-y: 1.5rem;
+
+// Buttons
+$btn-padding-x: 19px;
+$btn-padding-y: 9px;
+$btn-border-radius: .5rem;
+$btn-border-width: 1px;
+$btn-font-size: 1rem;
+$btn-line-height: normal;
+
+// Heading
+$headings-line-height: normal;
 
 // Nav
 $nav-pills-border-radius: 1rem;

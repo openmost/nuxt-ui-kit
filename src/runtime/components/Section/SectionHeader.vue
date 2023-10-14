@@ -1,21 +1,33 @@
 <template>
-  <header class="section-header">
+  <component :is="tag" class="section-header">
 
-    <h2>{{ title }}</h2>
+    <div class="section-title-wrapper">
+      <slot name="prepend"/>
+      <component :is="titleTag" class="section-title">{{ title }}</component>
+      <slot name="append"/>
+    </div>
 
     <ActionsWrapper v-if="$slots.actions">
       <slot name="actions"/>
     </ActionsWrapper>
 
-  </header>
+  </component>
 </template>
 
 <script setup>
 import {defineProps} from "@vue/runtime-core";
 
 const props = defineProps({
+  tag: {
+    type: String,
+    default: 'header'
+  },
   title: {
     type: String,
+  },
+  titleTag: {
+    type: String,
+    default: 'h2'
   }
 })
 </script>
@@ -28,5 +40,16 @@ const props = defineProps({
   align-content: center;
   align-items: center;
   margin-bottom: 2rem;
+
+  .section-title-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: .75rem;
+
+    .section-title {
+      margin-bottom: 0;
+    }
+  }
 }
 </style>

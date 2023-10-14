@@ -4,7 +4,11 @@
     :disabled="disabled"
     :to="to"
   >
+
+    <slot name="icon"/>
+
     <slot/>
+
   </NuxtLink>
 </template>
 
@@ -30,3 +34,23 @@ const navLinkClass = computed(() => {
   ];
 })
 </script>
+
+<style lang="scss">
+.nav-link {
+  display: flex;
+  gap: .75rem;
+  align-content: center;
+  align-items: center;
+
+  &.active svg {
+    color: var(--bs-accent);
+  }
+}
+
+.nav.nav-pills {
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, .03);
+  }
+}
+</style>
+

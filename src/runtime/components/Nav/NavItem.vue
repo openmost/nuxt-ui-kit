@@ -6,6 +6,11 @@
       :to="to"
       :active="active"
       :disabled="disabled">
+
+      <template #icon v-if="$slots.icon">
+        <slot name="icon"/>
+      </template>
+
       <slot/>
     </NavLink>
 
