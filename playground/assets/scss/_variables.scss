@@ -2,10 +2,12 @@ $font-family-base: 'Sora', sans-serif;
 
 $custom-colors: (
   "white": #fff,
-  "accent": #FFA32A
+  "accent": #FFA32A,
+  "surface": #1C1F41
 );
 
 $body-bg-dark: #161830;
+$surface: #1C1F41;
 $body-color-dark: #fff;
 
 $primary: #426CDA;
@@ -53,12 +55,34 @@ $btn-border-width: 1px;
 $btn-font-size: 1rem;
 $btn-line-height: normal;
 
+// Card
+$card-bg: $surface;
+$card-border-radius: 1rem;
+$card-border-color: $surface;
+$card-cap-padding-x: 2rem;
+$card-cap-padding-y: 2rem;
+$card-spacer-y: 2rem;
+$card-spacer-x: 2rem;
+$card-title-spacer-y: 2rem;
+
+// Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1544px //1320px
+);
+
 // Heading
 $headings-line-height: normal;
 
+$h4-font-size: 1.3125rem;
+
+
 // Nav
 $nav-pills-border-radius: 1rem;
-$nav-pills-link-active-bg: #1C1F41;
+$nav-pills-link-active-bg: $surface;
 $nav-pills-link-active-color: #fff;
 $nav-link-color: #fff;
 $nav-link-font-size: 1rem;

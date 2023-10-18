@@ -22,7 +22,19 @@
       </template>
     </AppHeader>
 
-   <slot/>
+    <ToolContentLayout>
+
+      <template #menu>
+        <span class="h4">Getting started</span>
+      </template>
+
+      <slot/>
+
+      <template #output>
+        Output
+      </template>
+
+    </ToolContentLayout>
 
     <ToolFooter/>
 

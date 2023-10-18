@@ -1,6 +1,6 @@
 <template>
   <div class="applications-manager">
-    <Button circle @click="open = !open">
+    <Button variant="surface" circle @click="open = !open">
       <template #icon>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -93,8 +93,7 @@ const open = ref(false);
 }
 
 .applications-manager-list {
-  background-color: var(--bs-secondary);
-  border: 1px solid red;
+  background-color: var(--bs-surface);
   position: absolute;
   z-index: 2;
   top: calc(40px + .5rem);
