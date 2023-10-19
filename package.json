@@ -1,6 +1,6 @@
 {
   "name": "@openmost/ui-kit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Openmost UI Kit for Nuxt",
   "repository": "openmost/ui-kit",
   "license": "MIT",
@@ -43,5 +43,8 @@
     "nuxt": "^3.7.4",
     "sass": "^1.69.3",
     "vitest": "^0.33.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
