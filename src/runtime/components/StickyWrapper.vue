@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import {defineProps} from "@vue/runtime-core";
 
 const props = defineProps({

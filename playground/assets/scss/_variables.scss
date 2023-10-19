@@ -74,11 +74,36 @@ $container-max-widths: (
   xxl: 1544px //1320px
 );
 
+// Form text
+$form-text-margin-top: .25rem;
+$form-text-font-size: .75rem;
+$form-text-font-weight: 300;
+$form-text-color: #AEAFBB;
+
+// Form label
+$form-label-color: #fff;
+$form-label-font-size: 1rem;
+$form-label-font-weight: 300;
+$form-label-margin-bottom: .5rem;
+
+
 // Heading
 $headings-line-height: normal;
 
 $h4-font-size: 1.3125rem;
 
+// Input
+$input-bg: $surface;
+$input-color: #fff;
+$input-border-color: #414463;
+$input-font-size: 1rem;
+$input-font-weight: 300;
+$input-border-radius: .5rem;
+
+// Input group
+$input-group-addon-bg: rgba(255, 255, 255, .03);
+$input-group-addon-padding-x: .75rem;
+$input-group-addon-padding-y: .5rem;
 
 // Nav
 $nav-pills-border-radius: 1rem;
