@@ -20,20 +20,20 @@
 
     <template v-for="option in options" :key="option[valueField]">
       <FormSelectOptionGroup
-          v-if="option.options"
-          :disabled-fields="disabledField"
-          :label="option[labelField]"
-          :options="option[optionField]"
-          :text-field="textField"
-          :value-field="valueField"
+        v-if="option.options"
+        :disabled-fields="disabledField"
+        :label="option[labelField]"
+        :options="option[optionField]"
+        :text-field="textField"
+        :value-field="valueField"
       ></FormSelectOptionGroup>
 
       <FormSelectOption
-          v-else
-          :value="option[valueField]"
-          :selected="(modelValue === option[valueField])"
-          :disabled="option[disabledField]"
-          :key="option[valueField]"
+        v-else
+        :value="option[valueField]"
+        :selected="(modelValue === option[valueField])"
+        :disabled="option[disabledField]"
+        :key="option[valueField]"
       >{{ option[textField] }}
       </FormSelectOption>
 
@@ -135,8 +135,8 @@ const inputClass = computed(() => {
 function onChange(event) {
   const {target} = event;
   const selectedValue = Array.from(target.options)
-      .filter(o => o.selected)
-      .map(o => ('_value' in o ? o._value : o.value))
+    .filter(o => o.selected)
+    .map(o => ('_value' in o ? o._value : o.value))
 
   emit('change', target.multiple ? selectedValue : selectedValue[0]);
 }
@@ -144,8 +144,8 @@ function onChange(event) {
 function onInput(event) {
   const {target} = event;
   const selectedValue = Array.from(target.options)
-      .filter(o => o.selected)
-      .map(o => ('_value' in o ? o._value : o.value))
+    .filter(o => o.selected)
+    .map(o => ('_value' in o ? o._value : o.value))
 
   emit('update:modelValue', target.multiple ? selectedValue : selectedValue[0]);
 }

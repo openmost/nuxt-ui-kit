@@ -1,24 +1,24 @@
 <template>
   <div class="tool-output-card">
-
-    <div class="tool-output-card-header" v-if="title">
-      <h2 class="h4 tool-output-card-title" v-text="title"></h2>
-
+    <div v-if="title"
+         class="tool-output-card-header"
+    >
+      <h2 class="h4 tool-output-card-title"
+          v-text="title"
+      ></h2>
       <ActionsWrapper v-if="$slots.actions">
-        <slot name="actions"/>
+        <slot name="actions" />
       </ActionsWrapper>
-
     </div>
-
     <slot/>
-
   </div>
 </template>
 
 <script setup>
-const props = defineProps({
+defineProps({
   title: {
-    type: String
+    type: String,
+    default: ''
   }
 })
 </script>

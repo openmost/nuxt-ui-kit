@@ -1,27 +1,29 @@
 <template>
   <ToolOutputCard title="Copy this URL">
-
     <template #actions>
-      <Button variant="outline-primary" v-if="url">
-
+      <Button
+        v-if="url"
+        variant="outline-primary"
+      >
         <template #icon>
-          <IconCopy/>
+          <IconCopy />
         </template>
-
         <span>Copy link</span>
-
       </Button>
     </template>
-
-    <FormTextarea rows="5" :value="url" v-if="url"/>
-
+    <FormTextarea
+      v-if="url"
+      rows="5"
+      :value="url"
+    />
   </ToolOutputCard>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   url: {
-    type: String
+    type: String,
+    default: ''
   }
 })
 </script>
