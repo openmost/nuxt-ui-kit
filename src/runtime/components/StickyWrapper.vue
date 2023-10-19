@@ -5,8 +5,6 @@
 </template>
 
 <script setup>
-import {defineProps} from "@vue/runtime-core";
-
 const props = defineProps({
   top: {
     type: Number,

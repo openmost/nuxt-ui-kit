@@ -13,10 +13,6 @@
   </Button>
 </template>
 
-<script setup>
-
-</script>
-
 <style lang="scss">
 .sign-in-with-openmost {
   font-weight: 500;

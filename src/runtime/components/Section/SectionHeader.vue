@@ -15,8 +15,6 @@
 </template>
 
 <script setup>
-import {defineProps} from "@vue/runtime-core";
-
 const props = defineProps({
   tag: {
     type: String,

@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import {defineProps, computed, ref} from "@vue/runtime-core";
+import {computed, ref} from "vue";
 
 const props = defineProps({
   id: {

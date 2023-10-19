@@ -89,7 +89,7 @@
 </template>
 
 <script setup>
-import {computed} from "@vue/runtime-core";
+import {computed} from "vue";
 
 const emit = defineEmits(['input'])
 const props = defineProps({

@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import {computed, ref} from "@vue/runtime-core";
+import {computed, ref} from "vue";
 
 const props = defineProps({
   triggerText: {

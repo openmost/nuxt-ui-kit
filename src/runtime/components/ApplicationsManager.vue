@@ -54,7 +54,7 @@
 </template>
 
 <script setup>
-import {ref} from "@vue/runtime-core";
+import {ref} from "vue";
 
 const applications = ref([
   {
