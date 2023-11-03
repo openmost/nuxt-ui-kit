@@ -25,7 +25,7 @@
   min-height: calc(100vh - 148px);
   padding-top: 132px;
   display: flex;
-  gap: 100px;
+  gap: 80px;
 
   .tool-menu,
   .tool-content,
@@ -42,14 +42,14 @@
   }
 
   .tool-content {
-    flex-basis: 650px;
-    max-width: 650px;
+    flex-basis: 605px;
+    max-width: 605px;
     flex-grow: 1;
   }
 
   .tool-output {
-    flex-basis: 400px;
-    max-width: 400px;
+    flex-basis: 485px;
+    max-width: 485px;
   }
 }
 </style>

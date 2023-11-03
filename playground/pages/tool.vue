@@ -5,13 +5,36 @@
 
       <div>
         <h2 class="h4">Getting started</h2>
+
+        <Nav vertical anchor>
+          <NavItem to="/" active>Required parameters</NavItem>
+          <NavItem to="/qsd">Optionals parameters</NavItem>
+          <NavItem to="/qsdqsd">Seconds parameters</NavItem>
+        </Nav>
+      </div>
+
+      <div>
+        <h2 class="h4">Parameters</h2>
         <FormCheckbox switch>Only Matomo</FormCheckbox>
       </div>
 
-      <h2 class="h4">Parameters</h2>
-
-
-      <h2 class="h4">Ressources</h2>
+      <div>
+        <h2 class="h4">Ressources</h2>
+        <Nav vertical>
+          <NavItem external to="https://google.com" active>
+            <template #icon>
+              <IconCopy/>
+            </template>
+            Official documentation
+          </NavItem>
+          <NavItem external to="https://ronan-hello.fr">
+            <template #icon>
+              <IconCopy/>
+            </template>
+            Learn more about parameters
+          </NavItem>
+        </Nav>
+      </div>
 
       <ToolCtaCard/>
 
@@ -22,7 +45,7 @@
       <h2 class="h3 card-title">Required parameters</h2>
 
       <fieldset>
-        <FormGroup label="Page URL" description="The full website URL (https://your-website.com)">
+        <FormGroup label="Page URL" description="The full website URL (https://your-website.com)" class="mb-4">
           <FormInputGroup>
             <template #prepend>
               <code class="input-group-text">&utm_source</code>
@@ -31,7 +54,7 @@
           </FormInputGroup>
         </FormGroup>
 
-        <FormGroup label="Page URL" description="The full website URL (https://your-website.com)">
+        <FormGroup label="Page URL" description="The full website URL (https://your-website.com)" class="mb-4">
           <FormInputGroup>
             <template #prepend>
               <code class="input-group-text">&utm_source</code>
@@ -40,7 +63,7 @@
           </FormInputGroup>
         </FormGroup>
 
-        <FormGroup label="Page URL" description="The full website URL (https://your-website.com)">
+        <FormGroup label="Page URL" description="The full website URL (https://your-website.com)" class="mb-4">
           <FormInputGroup>
             <template #prepend>
               <code class="input-group-text">&utm_source</code>
@@ -73,3 +96,5 @@
 
   </ToolContentLayout>
 </template>
+<script setup lang="ts">
+</script>

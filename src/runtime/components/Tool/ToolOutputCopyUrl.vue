@@ -1,12 +1,12 @@
 <template>
-  <ToolOutputCard title="Copy this URL">
+  <ToolOutputCard class="tool-output-card" title="Copy this URL">
     <template #actions>
       <Button
         v-if="url"
         variant="outline-primary"
       >
         <template #icon>
-          <IconCopy />
+          <IconCopy/>
         </template>
         <span>Copy link</span>
       </Button>
@@ -27,3 +27,14 @@ defineProps({
   }
 })
 </script>
+
+<style lang="scss">
+.tool-output-card {
+
+  textarea {
+    background-color: var(--bs-surface);
+    border-width: 0;
+  }
+
+}
+</style>

@@ -4,6 +4,7 @@
     <NavLink
       v-if="to"
       :to="to"
+      :external="external"
       :active="active"
       :disabled="disabled">
 
@@ -12,6 +13,7 @@
       </template>
 
       <slot/>
+
     </NavLink>
 
     <slot v-else/>
@@ -35,13 +37,17 @@ const props = defineProps({
   },
   to: {
     type: String,
+  },
+  external: {
+    type: Boolean,
+    default: false
   }
 })
 
 const navItemClass = computed(() => {
   return [
     'nav-item',
-    props.active ? props.activeClass : null
+    props.active ? props.activeClass : null,
   ]
 })
 </script>

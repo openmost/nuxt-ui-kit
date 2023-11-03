@@ -55,6 +55,14 @@ $btn-border-width: 1px;
 $btn-font-size: 1rem;
 $btn-line-height: normal;
 
+// Buttons LG
+$btn-padding-x-lg: 1.4375rem;
+$btn-padding-y-lg: .6875rem;
+$btn-border-radius-lg: .5rem;
+$btn-font-weight-lg: 500;
+$btn-font-size-lg: 1.1875rem;
+$btn-line-height-lg: normal;
+
 // Card
 $card-bg: $surface;
 $card-border-radius: 1rem;
@@ -64,6 +72,9 @@ $card-cap-padding-y: 2rem;
 $card-spacer-y: 2rem;
 $card-spacer-x: 2rem;
 $card-title-spacer-y: 2rem;
+
+// Checkbox
+
 
 // Container
 $container-max-widths: (
@@ -93,12 +104,16 @@ $headings-line-height: normal;
 $h4-font-size: 1.3125rem;
 
 // Input
-$input-bg: $surface;
+$input-bg: transparent;
 $input-color: #fff;
 $input-border-color: #414463;
 $input-font-size: 1rem;
+$input-font-size-lg: 1.1875rem;
 $input-font-weight: 300;
-$input-border-radius: .5rem;
+$input-font-weight-lg: 300;
+$input-border-radius-sm: .5rem;
+$input-border-radius: .75rem;
+$input-border-radius-lg: .75rem;
 
 // Input group
 $input-group-addon-bg: rgba(255, 255, 255, .03);
@@ -106,11 +121,18 @@ $input-group-addon-padding-x: .75rem;
 $input-group-addon-padding-y: .5rem;
 
 // Nav
+$nav-link-color: $secondary;
+$nav-link-hover-color: #fff;
+$nav-link-padding-y: .25rem;
+$nav-link-padding-x: 0;
+$nav-link-font-size: 1rem;
+$nav-link-font-weight: 300;
+$nav-link-hover-color: #fff;
+
 $nav-pills-border-radius: 1rem;
 $nav-pills-link-active-bg: $surface;
 $nav-pills-link-active-color: #fff;
-$nav-link-color: #fff;
-$nav-link-font-size: 1rem;
-$nav-link-font-weight: 450;
-$nav-link-hover-color: #fff;
-$nav-link-padding-y: .8125rem;
+
+
+// Select
+$form-select-font-weight: 300;

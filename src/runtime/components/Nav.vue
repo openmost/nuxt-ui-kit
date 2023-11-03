@@ -11,6 +11,10 @@
 import {computed} from "vue";
 
 const props = defineProps({
+  anchor: {
+    type: Boolean,
+    default: false,
+  },
   fill: {
     type: Boolean,
   },
@@ -44,6 +48,7 @@ const navClass = computed(() => {
     props.tabs ? 'nav-tabs' : null,
     props.pills ? 'nav-pills' : null,
     props.underline ? 'nav-underline' : null,
+    props.anchor ? 'nav-anchor' : null,
   ]
 })
 

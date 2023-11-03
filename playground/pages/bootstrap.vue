@@ -46,6 +46,93 @@
         <Button variant="surface">Surface</Button>
       </div>
 
+      <div class="d-flex gap-4 mt-4">
+        <Button variant="outline-primary">Primary</Button>
+        <Button variant="outline-secondary">Secondary</Button>
+        <Button variant="outline-success">Success</Button>
+        <Button variant="outline-danger">Danger</Button>
+        <Button variant="outline-warning">Warning</Button>
+        <Button variant="outline-info">Info</Button>
+        <Button variant="outline-light">Light</Button>
+        <Button variant="outline-dark">Dark</Button>
+        <Button variant="outline-link">Link</Button>
+        <Button variant="outline-surface">Surface</Button>
+      </div>
+
+      <div class="d-flex gap-4 mt-4">
+        <Button size="lg" variant="primary">Primary</Button>
+        <Button size="lg" variant="secondary">Secondary</Button>
+        <Button size="lg" variant="success">Success</Button>
+        <Button size="lg" variant="danger">Danger</Button>
+        <Button size="lg" variant="warning">Warning</Button>
+        <Button size="lg" variant="info">Info</Button>
+        <Button size="lg" variant="light">Light</Button>
+        <Button size="lg" variant="dark">Dark</Button>
+        <Button size="lg" variant="link">Link</Button>
+        <Button size="lg" variant="surface">Surface</Button>
+      </div>
+
+      <div class="d-flex gap-4 mt-4">
+        <Button size="lg" variant="outline-primary">Primary</Button>
+        <Button size="lg" variant="outline-secondary">Secondary</Button>
+        <Button size="lg" variant="outline-success">Success</Button>
+        <Button size="lg" variant="outline-danger">Danger</Button>
+        <Button size="lg" variant="outline-warning">Warning</Button>
+        <Button size="lg" variant="outline-info">Info</Button>
+        <Button size="lg" variant="outline-light">Light</Button>
+        <Button size="lg" variant="outline-dark">Dark</Button>
+        <Button size="lg" variant="outline-link">Link</Button>
+        <Button size="lg" variant="outline-surface">Surface</Button>
+      </div>
+
+      <div class="d-flex gap-4 mt-4">
+        <Button variant="outline-primary">
+          <template #icon>
+            <IconCopy/>
+          </template>
+          Primary
+        </Button>
+
+        <Button variant="primary">
+          <template #icon>
+            <IconCopy/>
+          </template>
+          Primary
+        </Button>
+
+        <Button variant="primary" disabled>
+          <template #icon>
+            <IconCopy/>
+          </template>
+          Primary
+        </Button>
+
+      </div>
+
+      <div class="d-flex gap-4 mt-4">
+
+        <Button size="lg" variant="outline-primary">
+          <template #icon>
+            <IconCopy/>
+          </template>
+          Primary
+        </Button>
+
+        <Button size="lg" variant="primary">
+          <template #icon>
+            <IconCopy/>
+          </template>
+          Primary
+        </Button>
+
+        <Button size="lg" variant="primary" disabled>
+          <template #icon>
+            <IconCopy/>
+          </template>
+          Primary
+        </Button>
+      </div>
+
     </Section>
 
 
@@ -75,6 +162,7 @@
         <FormInput type="file"/>
 
         <FormSelect :options="[{text: 'Option 1', value: 1}, {text: 'Option 2', value: 2}]"/>
+        <FormSelect size="lg" :options="[{text: 'Option 1', value: 1}, {text: 'Option 2', value: 2}]"/>
 
         <FormCheckbox id="checka">Default checkbox</FormCheckbox>
         <FormCheckbox id="checkb" checked>Checked checkbox</FormCheckbox>

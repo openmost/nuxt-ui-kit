@@ -14,11 +14,13 @@
 
   p {
     font-weight: 500;
+    margin-bottom: 1.5rem;
   }
 
   .btn {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
 }
 </style>

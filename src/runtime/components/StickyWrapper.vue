@@ -1,5 +1,5 @@
 <template>
-  <div class="position-sticky" :style="`top: 132px`">
+  <div class="sticky-wrapper" :style="`top: ${top}px`">
     <slot/>
   </div>
 </template>
@@ -12,3 +12,10 @@ const props = defineProps({
   }
 })
 </script>
+
+<style lang="scss">
+.sticky-wrapper {
+  position: sticky;
+  align-self: flex-start;
+}
+</style>
