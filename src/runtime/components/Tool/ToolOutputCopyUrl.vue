@@ -4,7 +4,7 @@
       <Button
         v-if="url"
         variant="outline-primary"
-      >
+        @click="copyToClipboard">
         <template #icon>
           <IconCopy/>
         </template>
@@ -20,12 +20,16 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   url: {
     type: String,
     default: ''
   }
 })
+
+function copyToClipboard() {
+  navigator.clipboard.writeText(props.url);
+}
 </script>
 
 <style lang="scss">
