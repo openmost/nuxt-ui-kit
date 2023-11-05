@@ -13,17 +13,23 @@
     </template>
     <FormTextarea
       v-if="url"
-      rows="5"
+      :rows="textareaRows"
       :value="url"
     />
+    <Alert v-else variant="danger">URL is missing</Alert>
   </ToolOutputCard>
 </template>
 
 <script setup lang="ts">
+
 const props = defineProps({
   url: {
     type: String,
     default: ''
+  },
+  textareaRows: {
+    type: Number,
+    default: 5
   }
 })
 

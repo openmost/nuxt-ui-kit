@@ -58,5 +58,9 @@ const navClass = computed(() => {
 <style lang="scss">
 .nav {
   gap: 1rem;
+
+  &.nav-anchor {
+    gap: .25rem;
+  }
 }
 </style>

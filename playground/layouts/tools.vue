@@ -12,7 +12,7 @@
       </template>
     </AppHeader>
 
-      <slot/>
+    <slot/>
 
     <ToolFooter/>
 

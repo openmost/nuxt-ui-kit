@@ -47,7 +47,6 @@ const props = defineProps({
 
 const formGroupClass = computed(() => {
   return [
-    'form-group',
     props.class,
     props.floating ? 'form-floating' : 'form-group',
   ]

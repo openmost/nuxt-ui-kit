@@ -35,10 +35,34 @@
       </template>
     </Button>
 
-    <div class="applications-manager-list">
+    <div class="applications-manager-list" v-if="open">
+      <ApplicationsManagerItem name="URL Builder" to="https://url-builder.openmost.io">
+        <template #logo>
+          <LogoUrlBuilder/>
+        </template>
+      </ApplicationsManagerItem>
+
+      <ApplicationsManagerItem name="HTTP Builder" to="https://http-builder.openmost.io">
+        <template #logo>
+          <LogoHttpBuilder/>
+        </template>
+      </ApplicationsManagerItem>
+
       <ApplicationsManagerItem name="API Builder" to="https://api-builder.openmost.io">
         <template #logo>
           <LogoApiBuilder/>
+        </template>
+      </ApplicationsManagerItem>
+
+      <ApplicationsManagerItem name="Toolkit" to="https://api-builder.openmost.io">
+        <template #logo>
+          <LogoToolkit/>
+        </template>
+      </ApplicationsManagerItem>
+
+      <ApplicationsManagerItem name="Account" to="https://accounts.openmost.io">
+        <template #logo>
+          <LogoToolkit/>
         </template>
       </ApplicationsManagerItem>
     </div>
@@ -58,33 +82,18 @@ const open = ref(false);
 }
 
 .applications-manager-list {
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 1rem;
   background-color: var(--bs-surface);
   position: absolute;
   z-index: 2;
   top: calc(40px + .5rem);
   right: 0;
   margin-bottom: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: .5rem;
-  flex-wrap: wrap;
-  width: 300px;
   padding: .5rem;
-
-  li {
-    list-style: none;
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
-
-      span {
-        display: block;
-      }
-    }
-  }
+  width: 370px;
 }
 </style>
