@@ -36,7 +36,7 @@ const props = defineProps({
     type: Boolean
   },
   to: {
-    type: String,
+    type: [String, Object],
   },
   external: {
     type: Boolean,

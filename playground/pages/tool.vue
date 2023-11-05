@@ -7,9 +7,9 @@
         <h2 class="h4">Getting started</h2>
 
         <Nav vertical anchor>
-          <NavItem to="/" active>Required parameters</NavItem>
-          <NavItem to="/qsd">Optionals parameters</NavItem>
-          <NavItem to="/qsdqsd">Seconds parameters</NavItem>
+          <NavItem :to="{path: '/tool', hash: '#test'}">Required parameters</NavItem>
+          <NavItem :to="{path: '/tool', hash: '#demo'}">Optionals parameters</NavItem>
+          <NavItem :to="{path: '/tool', hash: '#tututu'}">Seconds parameters</NavItem>
         </Nav>
       </div>
 
@@ -21,15 +21,15 @@
       <div>
         <h2 class="h4">Ressources</h2>
         <Nav vertical>
-          <NavItem external to="https://google.com" active>
+          <NavItem to="https://google.com" external>
             <template #icon>
-              <IconCopy/>
+              <LogoMatomo/>
             </template>
             Official documentation
           </NavItem>
-          <NavItem external to="https://ronan-hello.fr">
+          <NavItem to="https://ronan-hello.fr" external>
             <template #icon>
-              <IconCopy/>
+              <LogoRonanHello/>
             </template>
             Learn more about parameters
           </NavItem>
@@ -41,10 +41,11 @@
     </template>
 
 
-    <Card title="Required parameters" v-for="i in [1, 2, 3, 4]">
-      <h2 class="h3 card-title">Required parameters</h2>
+    <Card title="Required parameters" v-for="i in [1, 2, 3, 4]" id="demo">
 
       <fieldset>
+        <legend>Required parameters</legend>
+
         <FormGroup label="Page URL" description="The full website URL (https://your-website.com)" class="mb-4">
           <FormInputGroup>
             <template #prepend>
@@ -86,15 +87,17 @@
 
     <template #output>
 
-      <ToolOutputCopyUrl url="https://openmost.io"/>
+      <ToolOutputCopyUrl :url="url"/>
 
       <ToolOutputCard title="Or use this QR code">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, corporis!
+        {{ url }}
       </ToolOutputCard>
 
     </template>
 
   </ToolContentLayout>
 </template>
+
 <script setup lang="ts">
+const url = 'https://demo.com'
 </script>

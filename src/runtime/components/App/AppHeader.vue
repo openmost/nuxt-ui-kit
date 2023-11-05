@@ -63,6 +63,7 @@ const headerWrapperClass = computed(() => {
       svg {
         max-height: 34px;
         width: 100%;
+        color: var(--bs-primary);
       }
     }
   }
