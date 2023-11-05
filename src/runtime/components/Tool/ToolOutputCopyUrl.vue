@@ -24,7 +24,7 @@
 
 const props = defineProps({
   url: {
-    type: String,
+    type: Url,
     default: ''
   },
   textareaRows: {

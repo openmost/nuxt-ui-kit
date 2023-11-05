@@ -150,3 +150,9 @@ function onInput(event) {
   emit('update:modelValue', target.multiple ? selectedValue : selectedValue[0]);
 }
 </script>
+
+<style lang="scss">
+[data-bs-theme=dark] .form-select {
+  background-color: var(--bs-surface);
+}
+</style>
