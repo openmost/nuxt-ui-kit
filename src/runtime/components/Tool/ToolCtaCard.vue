@@ -1,8 +1,8 @@
 <template>
   <div class="tool-cta-card">
-    <p>Start with Openmost to get revealant data for better decisions.</p>
+    <p>Get started with Openmost to gain insightful data for better decisions.</p>
 
-    <NuxtLink external href="https://openmost.io/contact" class="btn btn-primary">Ask a quote</NuxtLink>
+    <NuxtLink external href="https://openmost.io/contact" class="btn btn-primary">Get in touch with Matomo experts</NuxtLink>
   </div>
 </template>
 

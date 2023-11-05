@@ -53,18 +53,6 @@
           <LogoApiBuilder/>
         </template>
       </ApplicationsManagerItem>
-
-      <ApplicationsManagerItem name="Toolkit" to="https://api-builder.openmost.io">
-        <template #logo>
-          <LogoToolkit/>
-        </template>
-      </ApplicationsManagerItem>
-
-      <ApplicationsManagerItem name="Account" to="https://accounts.openmost.io">
-        <template #logo>
-          <LogoToolkit/>
-        </template>
-      </ApplicationsManagerItem>
     </div>
 
   </div>
@@ -94,6 +82,6 @@ const open = ref(false);
   grid-template-columns: repeat(3, 1fr);
   gap: .5rem;
   padding: .5rem;
-  width: 370px;
+  width: 360px;
 }
 </style>
