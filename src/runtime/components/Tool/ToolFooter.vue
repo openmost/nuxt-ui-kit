@@ -5,9 +5,9 @@
       <div class="footer-wrapper">
         <div class="footer-start">
 
-          <NuxtLink to="https://openmost.io" external>
+          <a href="https://openmost.io" target="_blank" rel="noopener">
             <LogoOpenmostCombinationWhite/>
-          </NuxtLink>
+          </a>
 
           <span>&copy; {{ date }} Openmost. All rights reserved.</span>
 

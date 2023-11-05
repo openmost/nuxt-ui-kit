@@ -47,13 +47,16 @@
         <legend>Required parameters</legend>
 
         <FormGroup label="Page URL" description="The full website URL (https://your-website.com)" class="mb-4">
-          <FormInputGroup>
+          <FormInputGroup size="lg">
             <template #prepend>
               <code class="input-group-text">&utm_source</code>
             </template>
-            <FormInput value="https://monsite.com"/>
+
+            <FormSelect value="https://monsite.com" :options="[{text: 'test', value: 1},{text: 'test', value: 1}, {text: 'test', value: 1}]"/>
+
           </FormInputGroup>
         </FormGroup>
+
 
         <FormGroup label="Page URL" description="The full website URL (https://your-website.com)" class="mb-4">
           <FormInputGroup>
