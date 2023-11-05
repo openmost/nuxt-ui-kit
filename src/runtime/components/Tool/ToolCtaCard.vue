@@ -2,7 +2,7 @@
   <div class="tool-cta-card">
     <p>Start with Openmost to get revealant data for better decisions.</p>
 
-    <Button to="/" variant="primary">Ask a quote</Button>
+    <NuxtLink external href="https://openmost.io/contact" class="btn btn-primary">Ask a quote</NuxtLink>
   </div>
 </template>
 

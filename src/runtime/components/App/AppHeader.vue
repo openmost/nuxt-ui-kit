@@ -59,6 +59,11 @@ const headerWrapperClass = computed(() => {
     .navbar-brand {
       padding-top: .5rem;
       padding-bottom: .5rem;
+
+      svg {
+        max-height: 34px;
+        width: 100%;
+      }
     }
   }
 

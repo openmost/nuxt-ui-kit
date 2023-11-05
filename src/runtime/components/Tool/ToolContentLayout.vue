@@ -50,6 +50,7 @@
   .tool-output {
     flex-basis: 485px;
     max-width: 485px;
+    min-width: 485px;
   }
 }
 </style>
