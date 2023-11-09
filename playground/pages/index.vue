@@ -65,8 +65,9 @@
       <p>Lorem ipsum dolor sit amet consectetur. Elit.</p>
 
       <template #actions>
-        <Button variant="primary" to="/">View more</Button>
-        <a href="/">Maybe Later</a>
+        <Button variant="primary" to="/">View more link</Button>
+        <Button variant="primary">View more click</Button>
+        <NuxtLink to="/">Maybe Later</NuxtLink>
       </template>
     </Alert>
 

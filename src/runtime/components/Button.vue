@@ -4,10 +4,9 @@
     :class="buttonClass"
     :disabled="disabled"
     :rel="rel"
-    :is="tag"
+    :is="buttonTag"
     :type="type"
   >
-
     <slot name="icon"/>
 
     <slot>{{ text }}</slot>
@@ -16,7 +15,7 @@
 </template>
 
 <script setup>
-import {computed} from "vue";
+import {computed, resolveComponent} from "vue";
 
 const props = defineProps({
   ariaLabel: {
@@ -43,6 +42,10 @@ const props = defineProps({
   text: {
     type: String,
   },
+  to: {
+    type: [String, Object],
+    required: false,
+  },
   type: {
     type: String,
     default: 'button',
@@ -60,6 +63,10 @@ const buttonClass = computed(() => {
     props.variant ? `btn-${props.variant}` : null,
     props.circle ? `btn-circle` : null,
   ]
+})
+
+const buttonTag = computed(() => {
+  return (props.to || props.href) ? resolveComponent('NuxtLink') : props.tag;
 })
 </script>
 

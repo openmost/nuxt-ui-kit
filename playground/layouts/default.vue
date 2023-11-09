@@ -1,30 +1,27 @@
 <template>
-  <div>
-
-    <AppHeader tool>
-      <template #brand>
-        <LogoUrlBuilder/>
-        <span>Matomo tracking HTTP API URL builder</span>
-      </template>
-
-      <template #actions>
-        <ApplicationsManager/>
-      </template>
-    </AppHeader>
-
-   <slot/>
-
-    <ToolFooter/>
-
+  <div class="default-layout">
+    <Sidebar/>
+    <div id="content-wrapper">
+      <Header/>
+      <main id="content">
+        <slot/>
+      </main>
+    </div>
   </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
-
 <style lang="scss">
-#content {
-  padding-top: 136px;
+.default-layout {
+  display: flex;
+
+  #content-wrapper {
+    flex-grow: 1;
+  }
+
+  #content {
+    padding-right: 1.5rem;
+  }
 }
 </style>
+<script setup lang="ts">
+</script>
