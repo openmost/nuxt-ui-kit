@@ -3,8 +3,9 @@
     aria-label="ariaLabel"
     :class="buttonClass"
     :disabled="disabled"
-    :rel="rel"
     :is="buttonTag"
+    :rel="rel"
+    :to="to"
     :type="type"
   >
     <slot name="icon"/>
