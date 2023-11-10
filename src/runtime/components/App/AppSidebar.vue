@@ -32,9 +32,10 @@ const sidebarClass = computed(() => {
 <style lang="scss">
 .app-sidebar {
   min-width: 312px;
-  padding: 2rem 1.5rem;
+  padding: 0 1.5rem;
 
   .sidebar-logo {
+    padding-top: 2rem;
     margin-bottom: 50px;
   }
 }

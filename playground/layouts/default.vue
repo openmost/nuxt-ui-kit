@@ -1,8 +1,8 @@
 <template>
   <div class="default-layout">
-    <Sidebar/>
+    <Header/>
     <div id="content-wrapper">
-      <Header/>
+      <Sidebar/>
       <main id="content">
         <slot/>
       </main>
@@ -10,18 +10,17 @@
   </div>
 </template>
 
+
 <style lang="scss">
 .default-layout {
-  display: flex;
 
   #content-wrapper {
-    flex-grow: 1;
+    display: flex;
   }
 
   #content {
+    flex-grow: 1;
     padding-right: 1.5rem;
   }
 }
 </style>
-<script setup lang="ts">
-</script>

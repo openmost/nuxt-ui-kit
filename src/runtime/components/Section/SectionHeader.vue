@@ -2,9 +2,22 @@
   <component :is="tag" class="section-header">
 
     <div class="section-title-wrapper">
+
+      <Nav pills v-if="previousUrl">
+        <NavItem :to="previousUrl">
+          <template #icon>
+            <IconAngleLeft/>
+          </template>
+          {{ previousText }}
+        </NavItem>
+      </Nav>
+
       <slot name="prepend"/>
+
       <component :is="titleTag" class="section-title">{{ title }}</component>
+
       <slot name="append"/>
+
     </div>
 
     <ActionsWrapper v-if="$slots.actions">
@@ -26,6 +39,14 @@ const props = defineProps({
   titleTag: {
     type: String,
     default: 'h2'
+  },
+  previousText: {
+    type: String,
+    default: 'Back'
+  },
+  previousUrl: {
+    type: [String, Object, Boolean],
+    default: false,
   }
 })
 </script>

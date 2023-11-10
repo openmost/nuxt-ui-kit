@@ -59,6 +59,10 @@ const navClass = computed(() => {
 .nav {
   gap: 1rem;
 
+  &.nav-pills {
+    gap: .25rem;
+  }
+
   &.nav-anchor {
     gap: .25rem;
   }
