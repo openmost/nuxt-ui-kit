@@ -50,10 +50,6 @@
       <p>Lorem ipsum dolor sit amet consectetur. Elit.</p>
     </Alert>
 
-    <hr>
-
-    <SignInWithOpenmost/>
-
   </section>
 </template>
 

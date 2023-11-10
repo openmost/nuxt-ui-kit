@@ -1,4 +1,5 @@
 import {defineNuxtModule, addPlugin, createResolver, addComponentsDir} from '@nuxt/kit'
+import {addDependency} from "nypm";
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {

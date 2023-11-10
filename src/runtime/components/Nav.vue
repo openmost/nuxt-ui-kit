@@ -60,7 +60,7 @@ const navClass = computed(() => {
   gap: 1rem;
 
   &.nav-pills {
-    gap: .25rem;
+    gap: .5rem;
   }
 
   &.nav-anchor {

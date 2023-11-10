@@ -52,7 +52,8 @@
               <code class="input-group-text">&utm_source</code>
             </template>
 
-            <FormSelect value="https://monsite.com" :options="[{text: 'test', value: 1},{text: 'test', value: 1}, {text: 'test', value: 1}]"/>
+            <FormSelect value="https://monsite.com"
+                        :options="[{text: 'test', value: 1},{text: 'test', value: 1}, {text: 'test', value: 1}]"/>
 
           </FormInputGroup>
         </FormGroup>
@@ -102,5 +103,12 @@
 </template>
 
 <script setup lang="ts">
+import {useHead, definePageMeta} from '#imports';
+
+useHead({title: 'XXXX by Openmost'})
+definePageMeta({
+  layout: 'tools'
+})
+
 const url = 'https://demo.com'
 </script>

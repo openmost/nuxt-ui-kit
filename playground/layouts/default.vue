@@ -1,26 +1,15 @@
 <template>
-  <div class="default-layout">
-    <Header/>
-    <div id="content-wrapper">
-      <Sidebar/>
-      <main id="content">
-        <slot/>
-      </main>
-    </div>
-  </div>
+  <LayoutApp>
+
+    <template #header>
+      <TheHeader/>
+    </template>
+
+    <template #sidebar>
+      <TheSidebar/>
+    </template>
+
+    <slot/>
+
+  </LayoutApp>
 </template>
-
-
-<style lang="scss">
-.default-layout {
-
-  #content-wrapper {
-    display: flex;
-  }
-
-  #content {
-    flex-grow: 1;
-    padding-right: 1.5rem;
-  }
-}
-</style>

@@ -7,7 +7,7 @@
 
     <template #actions>
       <Nav pills>
-        <NavItem to="/logout">
+        <NavItem to="/login">
           <template #icon>
             <IconLogout/>
           </template>

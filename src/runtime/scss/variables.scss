@@ -1,0 +1,148 @@
+$font-family-base: 'Sora', sans-serif;
+
+$custom-colors: (
+  "white": #fff,
+  "accent": #FFA32A,
+  "surface": #1C1F41
+);
+
+$body-bg-dark: #161830;
+$surface: #1C1F41;
+$body-color-dark: #fff;
+
+$primary: #426CDA;
+$secondary: #AEAFBB;
+
+$success: #48C188;
+$success-bg-subtle: rgba($success, .1);
+$success-bg-subtle-dark: rgba($success, .1);
+$success-border-subtle: $success;
+$success-border-subtle-dark: $success;
+$success-text-emphasis-dark: #fff;
+
+$info: #426CDA;
+$info-bg-subtle: rgba($info, .1);
+$info-bg-subtle-dark: rgba($info, .1);
+$info-border-subtle: $info;
+$info-border-subtle-dark: $info;
+$info-text-emphasis-dark: #fff;
+
+$warning: #FFA32A;
+$warning-bg-subtle: rgba($warning, .1);
+$warning-bg-subtle-dark: rgba($warning, .1);
+$warning-border-subtle: $warning;
+$warning-border-subtle-dark: $warning;
+$warning-text-emphasis-dark: #fff;
+
+$danger: #F84B5C;
+$danger-bg-subtle: rgba($danger, .1);
+$danger-bg-subtle-dark: rgba($danger, .1);
+$danger-border-subtle: $danger;
+$danger-border-subtle-dark: $danger;
+$danger-text-emphasis-dark: #fff;
+
+// Alert
+$alert-border-radius: 1rem;
+$alert-border-width: 2px;
+$alert-padding-x: 1.5rem;
+$alert-padding-y: 1.5rem;
+
+// Buttons SM
+$btn-padding-x-sm: .5rem;
+$btn-padding-y-sm: .35975rem;
+$btn-border-radius-sm: .5rem;
+$btn-line-height-sm: normal;
+
+// Buttons
+$btn-padding-x: 19px;
+$btn-padding-y: 9px;
+$btn-border-radius: .5rem;
+$btn-border-width: 1px;
+$btn-font-size: 1rem;
+$btn-line-height: normal;
+
+// Buttons LG
+$btn-padding-x-lg: 1.4375rem;
+$btn-padding-y-lg: .6875rem;
+$btn-border-radius-lg: .5rem;
+$btn-font-weight-lg: 500;
+$btn-font-size-lg: 1.1875rem;
+$btn-line-height-lg: normal;
+
+// Card
+$card-bg: $surface;
+$card-border-radius: 1rem;
+$card-border-color: $surface;
+$card-cap-padding-x: 2rem;
+$card-cap-padding-y: 2rem;
+$card-spacer-y: 2rem;
+$card-spacer-x: 2rem;
+$card-title-spacer-y: 2rem;
+
+// Checkbox
+
+
+// Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1544px //1320px
+);
+
+// Form text
+$form-text-margin-top: .25rem;
+$form-text-font-size: .75rem;
+$form-text-font-weight: 300;
+$form-text-color: #AEAFBB;
+
+// Form label
+$form-label-color: #fff;
+$form-label-font-size: 1rem;
+$form-label-font-weight: 300;
+$form-label-margin-bottom: .5rem;
+
+// Heading
+$headings-line-height: normal;
+$headings-font-weight: 500;
+$h1-font-size: 5rem;
+$h2-font-size: 3rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.3125rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1.125rem;
+
+// Input
+$input-bg: transparent;
+$input-color: #fff;
+$input-border-color: #414463;
+$input-font-size: 1rem;
+$input-font-size-lg: 1.125rem;
+$input-font-weight: 300;
+$input-font-weight-lg: 300;
+$input-border-radius-sm: .5rem;
+$input-border-radius: .75rem;
+$input-border-radius-lg: .75rem;
+
+// Input group
+$input-group-addon-bg: rgba(255, 255, 255, .03);
+$input-group-addon-padding-x: .75rem;
+$input-group-addon-padding-y: .5rem;
+
+// Nav
+$nav-link-color: $secondary;
+$nav-link-hover-color: #fff;
+$nav-link-padding-y: .25rem;
+$nav-link-padding-x: 0;
+$nav-link-font-size: 1rem;
+$nav-link-font-weight: 300;
+$nav-link-hover-color: #fff;
+
+$nav-pills-border-radius: 1rem;
+$nav-pills-link-active-bg: $surface;
+$nav-pills-link-active-color: #fff;
+
+
+// Select
+$form-select-font-weight: 300;
