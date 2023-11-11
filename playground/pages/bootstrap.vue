@@ -2,7 +2,7 @@
 
   <main style="padding-top: 83px; min-height: calc(100vh - 148px)">
 
-    <Section title="Typography">
+    <BaseSection title="Typography">
       <h1>h1. Bootstrap heading</h1>
       <h2>h2. Bootstrap heading</h2>
       <h3>h3. Bootstrap heading</h3>
@@ -23,15 +23,15 @@
 
       <p class="lead">This is a lead paragraph. It stands out from regular paragraphs.</p>
 
-    </Section>
+    </BaseSection>
 
-    <Section title="Table">
-
-
-    </Section>
+    <BaseSection title="Table">
 
 
-    <Section title="Buttons">
+    </BaseSection>
+
+
+    <BaseSection title="Buttons">
 
       <div class="d-flex gap-4">
         <Button variant="primary">Primary</Button>
@@ -133,10 +133,10 @@
         </Button>
       </div>
 
-    </Section>
+    </BaseSection>
 
 
-    <Section title="Form">
+    <BaseSection title="Form">
 
       <div class="d-flex flex-column gap-4">
 
@@ -180,10 +180,10 @@
 
       </div>
 
-    </Section>
+    </BaseSection>
 
 
-    <Section title="Form group">
+    <BaseSection title="Form group">
 
       <div class="d-flex flex-column gap-4">
         <FormInputGroup prepend="@">
@@ -216,7 +216,7 @@
         </FormInputGroup>
       </div>
 
-    </Section>
+    </BaseSection>
 
   </main>
 

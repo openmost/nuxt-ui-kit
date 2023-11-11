@@ -14,7 +14,7 @@
 
       <slot name="prepend"/>
 
-      <component :is="titleTag" class="section-title">{{ title }}</component>
+      <component :is="titleTag" :class="titleClass">{{ title }}</component>
 
       <slot name="append"/>
 
@@ -28,6 +28,8 @@
 </template>
 
 <script setup>
+import {computed} from "vue";
+
 const props = defineProps({
   tag: {
     type: String,
@@ -35,6 +37,10 @@ const props = defineProps({
   },
   title: {
     type: String,
+  },
+  titleClass: {
+    type: String,
+    default: 'h3'
   },
   titleTag: {
     type: String,
@@ -48,6 +54,13 @@ const props = defineProps({
     type: [String, Object, Boolean],
     default: false,
   }
+})
+
+const titleClass = computed(() => {
+  return [
+    'section-title',
+    props.titleClass
+  ]
 })
 </script>
 

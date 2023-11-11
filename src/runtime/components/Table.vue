@@ -59,6 +59,7 @@
         </Tr>
         <slot name="bottom-row"/>
       </Tbody>
+      <slot/>
       <Tfoot :class="tfootClass" v-if="computedFields.length && footClone">
         <Tr :class="tfootTrClass">
           <Th
@@ -198,7 +199,6 @@ const tableClass = computed(() => {
     props.small ? 'table-sm' : null,
     props.variant ? `table-${props.variant}` : null,
     props.captionTop ? 'caption-top' : null,
-
   ]
 })
 
@@ -210,9 +210,23 @@ const tbodyClass = computed(() => {
 })
 
 const computedFields = computed(() => {
-  return props.fields.length === 0 && props.items ? Object.keys(props.items[0]).map(field => ({
+  return props.fields.length === 0 && props.items.length ? Object.keys(props.items[0]).map(field => ({
     key: field,
     label: field
   })) : props.fields;
 })
 </script>
+
+
+<style lang="scss">
+.table {
+  line-height: normal;
+  font-weight: 300;
+
+  th {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding-top: 1.125rem;
+    padding-bottom: 1.125rem;
+  }
+}
+</style>

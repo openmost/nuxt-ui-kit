@@ -19,10 +19,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
-
 <style lang="scss">
 #content {
   padding-top: 136px;
