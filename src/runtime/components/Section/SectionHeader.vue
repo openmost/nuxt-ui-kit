@@ -14,7 +14,7 @@
 
       <slot name="prepend"/>
 
-      <component :is="titleTag" :class="titleClass">{{ title }}</component>
+      <component v-if="title" :is="titleTag" :class="titleClass">{{ title }}</component>
 
       <slot name="append"/>
 
@@ -36,7 +36,7 @@ const props = defineProps({
     default: 'header'
   },
   title: {
-    type: String,
+    type: [String, Boolean],
   },
   titleClass: {
     type: String,

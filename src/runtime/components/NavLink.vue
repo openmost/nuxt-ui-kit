@@ -5,6 +5,7 @@
     :to="to"
     :external="external"
     :rel="rel"
+    exact-active-class="active"
     :target="target"
   >
 
