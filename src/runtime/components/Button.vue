@@ -8,10 +8,11 @@
     :to="to"
     :type="type"
   >
-    <slot name="icon"/>
+    <div class="btn-inner-wrapper">
+      <slot name="icon"/>
 
-    <slot>{{ text }}</slot>
-
+      <slot>{{ text }}</slot>
+    </div>
   </component>
 </template>
 
@@ -73,10 +74,13 @@ const buttonTag = computed(() => {
 
 <style lang="scss">
 .btn {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  gap: .5rem;
+
+  .btn-inner-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: .5rem;
+  }
 
   svg {
     width: 1.125rem;
