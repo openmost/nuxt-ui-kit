@@ -92,7 +92,7 @@ const target = computed(() => {
 
 .nav-pills .nav-link {
   color: var(--bs-body-color);
-  font-weight: 500;
+  font-weight: 400;
   padding: 0.75rem 1rem;
 }
 
