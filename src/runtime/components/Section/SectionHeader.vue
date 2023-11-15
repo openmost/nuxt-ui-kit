@@ -3,14 +3,12 @@
 
     <div class="section-title-wrapper">
 
-      <Nav pills v-if="previousUrl">
-        <NavItem :to="previousUrl">
-          <template #icon>
-            <IconAngleLeft/>
-          </template>
-          {{ previousText }}
-        </NavItem>
-      </Nav>
+      <Button v-if="previousUrl" :to="previousUrl" variant="transparent">
+        <template #icon>
+          <IconAngleLeft/>
+        </template>
+        {{ previousText }}
+      </Button>
 
       <slot name="prepend"/>
 
