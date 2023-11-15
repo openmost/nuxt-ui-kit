@@ -49,7 +49,10 @@ const props = defineProps({
 })
 
 const datatableItems = computed(() => props.items);
-datatableItems.value.map(item => item.selected = true);
+datatableItems.value.map((item, index) => {
+  item.selected = true
+  item.index = index;
+});
 
 const filter = ref('');
 const filteredItems = computed(() => props.items.filter(item => {
