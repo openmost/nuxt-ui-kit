@@ -48,12 +48,6 @@ const props = defineProps({
   }
 })
 
-const datatableItems = computed(() => props.items);
-datatableItems.value.map((item, index) => {
-  item.selected = true
-  item.index = index;
-});
-
 const filter = ref('');
 const filteredItems = computed(() => props.items.filter(item => {
   return Object.values(item).toString().toLowerCase().includes(filter.value.toLowerCase());
@@ -68,7 +62,7 @@ const pagedItems = computed(() => {
   return filteredItems.value.slice(pageOffset.value, pageOffset.value + pageSize.value);
 })
 
-const selected = computed(() => datatableItems.value.filter(item => item.selected));
+const selected = computed(() => props.items.filter(item => item.selected));
 </script>
 
 
