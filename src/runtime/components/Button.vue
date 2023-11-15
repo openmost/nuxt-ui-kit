@@ -9,9 +9,13 @@
     :type="type"
   >
     <div class="btn-inner-wrapper">
-      <slot name="icon"/>
+
+      <slot name="icon" v-if="iconPosition === 'start'"/>
 
       <slot>{{ text }}</slot>
+
+      <slot name="icon" v-if="iconPosition === 'end'"/>
+
     </div>
   </component>
 </template>
@@ -28,6 +32,10 @@ const props = defineProps({
   },
   disabled: {
     type: Boolean,
+  },
+  iconPosition: {
+    type: String,
+    default: 'start'
   },
   rel: {
     type: String,
@@ -96,6 +104,11 @@ const buttonTag = computed(() => {
 
   &.btn-danger {
     color: #fff;
+  }
+
+  &.btn-transparent:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: transparent;
   }
 
   &.btn-circle {
