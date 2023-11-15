@@ -1,6 +1,10 @@
 # Changelog
 
 
+## v1.0.26
+
+[compare changes](https://github.com/openmost/ui-kit/compare/v1.0.25...v1.0.26)
+
 ## v1.0.25
 
 [compare changes](https://github.com/openmost/ui-kit/compare/v1.0.24...v1.0.25)
