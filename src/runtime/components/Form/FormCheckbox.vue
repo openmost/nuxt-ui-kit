@@ -1,7 +1,6 @@
 <template>
   <div :class="formCheckClass">
     <input
-      v-model="selected"
       :class="formCheckInputClass"
       :aria-label="ariaLabel"
       :aria-labelledby="ariaLabelledby"
@@ -12,8 +11,8 @@
       :name="name"
       :required="required"
       type="checkbox"
-      :value="value"
-      @input="onInput"
+      :value="modelValue"
+      :checked="modelValue"
       @change="onChange"
     >
     <label :class="formCheckLabelClass" :for="id">
@@ -25,7 +24,7 @@
 <script setup>
 import {computed} from "vue";
 
-const emit = defineEmits(['change', 'input', 'update', 'update:modelValue']);
+const emit = defineEmits(['change', 'update:modelValue']);
 const props = defineProps({
   ariaLabel: {
     type: String,
@@ -46,7 +45,8 @@ const props = defineProps({
     default: 'outline-secondary',
   },
   checked: {
-    type: [Number, String, Array, Object],
+    type: [Boolean],
+    default: false,
   },
   disabled: {
     type: Boolean,
@@ -86,15 +86,12 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-  value: {
-    type: [String, Number, Array, Object]
-  },
   variant: {
     type: String,
   },
   modelValue: {
-    type: [Number, String, Array, Object, Boolean],
-    default: null,
+    type: [Number, Boolean],
+    default: false,
   },
 })
 
@@ -121,15 +118,8 @@ const formCheckLabelClass = computed(() => {
   ]
 })
 
-
-function onInput(event) {
-  let value = event.target.value;
-  emit('input', value);
-  emit('update:modelValue', value);
-}
-
 function onChange(event) {
-  let value = event.target.value;
-  emit('change', value);
+  emit('change', event.target.checked);
+  emit('update:modelValue', event.target.checked);
 }
 </script>

@@ -1,5 +1,4 @@
 <template>
-
   <section>
     <SectionHeader title="Segments">
       <template #actions>
@@ -107,6 +106,8 @@
 
 <script setup>
 import {ref} from "vue";
+
+const test = ref(true)
 
 const emit = defineEmits(['update', 'delete', 'import'])
 

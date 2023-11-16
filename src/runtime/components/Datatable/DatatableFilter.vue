@@ -6,7 +6,7 @@
           <IconSearch/>
         </div>
       </template>
-      <FormInput v-model="filter" placeholder="Search" @input="onInput"/>
+      <FormInput v-model="filter" id="datatable-filter" name="datatable-filter" placeholder="Search" @input="onInput"/>
     </FormInputGroup>
   </FormGroup>
 </template>

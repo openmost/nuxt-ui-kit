@@ -1,7 +1,7 @@
 <template>
   <div class="datatable-page-size-select">
     <span>Show</span>
-    <FormSelect :model-value="pageSize" :options="options" @input="onInput"/>
+    <FormSelect :model-value="pageSize" :options="options" id="datatable-page-size-select" name="datatable-page-size-select" @input="onInput"/>
     <span>entries</span>
   </div>
 </template>

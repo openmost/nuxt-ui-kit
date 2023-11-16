@@ -25,8 +25,8 @@
           :rowspan="field.rowspan"
         >
 
-          <template v-if="field.key === 'selected'">
-            <FormCheckbox @change="onCheckAll"/>
+          <template v-if="field.key === 'selected' && selectable">
+            <FormCheckbox v-model="checkAll" id="select-all" name="select-all" @change="onToggleSelectAll"/>
           </template>
 
           <slot :name="`head(${field.key ?? field})`"
@@ -95,7 +95,7 @@
 </template>
 
 <script setup>
-import {computed} from "vue";
+import {computed, ref} from "vue";
 
 const emit = defineEmits(['input'])
 const props = defineProps({
@@ -153,6 +153,10 @@ const props = defineProps({
   },
   responsive: {
     type: [Boolean, String],
+    default: false,
+  },
+  selectable: {
+    type: Boolean,
     default: false,
   },
   small: {
@@ -221,8 +225,10 @@ const computedFields = computed(() => {
   })) : props.fields;
 })
 
-function onCheckAll() {
-  return props.items.map(item => item.selected = true);
+const checkAll = ref(false);
+
+function onToggleSelectAll() {
+  props.items.map(item => item.selected = !checkAll.value)
 }
 </script>
 

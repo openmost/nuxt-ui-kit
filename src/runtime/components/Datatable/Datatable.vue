@@ -16,7 +16,7 @@
       </Row>
     </div>
 
-    <Table :items="pagedItems" :fields="fields" class="datatable" borderless>
+    <Table :items="pagedItems" :fields="fields" class="datatable" borderless selectable>
       <template v-for="(_, name) in $slots" v-slot:[name]="slotData">
         <slot :name="name" v-bind="slotData"/>
       </template>
