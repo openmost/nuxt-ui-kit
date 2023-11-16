@@ -8,82 +8,87 @@
         </slot>
       </caption>
       <Thead :class="theadClass" v-if="computedFields.length">
-        <slot name="thead-top"/>
-        <Tr scope="col" :class="theadTrClass">
-          <Th
-              v-for="(field, index) in computedFields"
-              :aria-colindex="index + 1"
-              :key="field.key"
-              :sortable="field.sortable"
-              :class="field.class"
-              :variant="field.variant"
-              :thStyle="field.thStyle"
-              :thClass="field.thClass"
-              :headerAbbr="field.headerAbbr"
-              :headerTitle="field.headerTitle"
-              :colspan="field.colspan"
-              :rowspan="field.rowspan"
-          >
-            <slot :name="`head(${field.key ?? field})`"
-                  :field="field"
-                  :index="index"
-                  :value="field.label ?? field ">
-              {{ field.label ?? field }}
-            </slot>
-          </Th>
-        </Tr>
+      <slot name="thead-top"/>
+      <Tr scope="col" :class="theadTrClass">
+        <Th
+          v-for="(field, index) in computedFields"
+          :aria-colindex="index + 1"
+          :key="field.key"
+          :sortable="field.sortable"
+          :class="field.class"
+          :variant="field.variant"
+          :thStyle="field.thStyle"
+          :thClass="field.thClass"
+          :headerAbbr="field.headerAbbr"
+          :headerTitle="field.headerTitle"
+          :colspan="field.colspan"
+          :rowspan="field.rowspan"
+        >
+
+          <template v-if="field.key === 'selected'">
+            <FormCheckbox @change="onCheckAll"/>
+          </template>
+
+          <slot :name="`head(${field.key ?? field})`"
+                :field="field"
+                :index="index"
+                :value="field.label ?? field ">
+            {{ field.label ?? field }}
+          </slot>
+        </Th>
+      </Tr>
       </Thead>
       <slot name="empty"/>
       <slot name="empty-filtered"/>
       <Tbody :class="tbodyClass" v-if="items">
-        <slot name="top-row"/>
-        <Tr :class="tbodyTrClass" v-for="item in items">
-          <Td
-              :aria-colindex="index + 1"
-              v-for="(field, index) in computedFields"
-              :key="field.key"
-              :class="field.class"
-              :tdClass="field.tdClass"
-              :variant="item.variant"
-              :colspan="item.colspan"
-              :rowspan="item.rowspan"
-          >
-            <slot :name="`cell(${field.key ?? field})`"
-                  :field="field"
-                  :index="index"
-                  :item="item"
-                  :value="item[field.key ?? field]">
-              {{ item[field.key ?? field] }}
-            </slot>
-          </Td>
-        </Tr>
-        <slot name="bottom-row"/>
+      <slot name="top-row"/>
+      <Tr :class="tbodyTrClass" v-for="item in items">
+        <Td
+          :aria-colindex="index + 1"
+          v-for="(field, index) in computedFields"
+          :key="field.key"
+          :class="field.class"
+          :tdClass="field.tdClass"
+          :variant="item.variant"
+          :colspan="item.colspan"
+          :rowspan="item.rowspan"
+        >
+          <slot :name="`cell(${field.key ?? field})`"
+                :field="field"
+                :index="index"
+                :item="item"
+                :value="item[field.key ?? field]">
+            {{ item[field.key ?? field] }}
+          </slot>
+        </Td>
+      </Tr>
+      <slot name="bottom-row"/>
       </Tbody>
       <slot/>
       <Tfoot :class="tfootClass" v-if="computedFields.length && footClone">
-        <Tr :class="tfootTrClass">
-          <Th
-              v-for="(field, index) in computedFields"
-              :key="field.key"
-              :aria-colindex="index + 1"
-              :sortable="field.sortable"
-              :class="field.class"
-              :variant="field.variant"
-              :style="field.thStyle"
-              :thClass="field.thClass"
-              :headerAbbr="field.headerAbbr"
-              :headerTitle="field.headerTitle"
-              :colspan="field.colspan"
-              :rowspan="field.rowspan"
-          >
-            <slot :name="`foot(${field.key ?? field})`"
-                  :field="field"
-                  :index="index"
-                  :value="field.label ?? field ">
-              {{ field.label ?? field }}
-            </slot>
-          </Th>
-        </Tr>
+      <Tr :class="tfootTrClass">
+        <Th
+          v-for="(field, index) in computedFields"
+          :key="field.key"
+          :aria-colindex="index + 1"
+          :sortable="field.sortable"
+          :class="field.class"
+          :variant="field.variant"
+          :style="field.thStyle"
+          :thClass="field.thClass"
+          :headerAbbr="field.headerAbbr"
+          :headerTitle="field.headerTitle"
+          :colspan="field.colspan"
+          :rowspan="field.rowspan"
+        >
+          <slot :name="`foot(${field.key ?? field})`"
+                :field="field"
+                :index="index"
+                :value="field.label ?? field ">
+            {{ field.label ?? field }}
+          </slot>
+        </Th>
+      </Tr>
       </Tfoot>
     </table>
   </div>
@@ -215,6 +220,10 @@ const computedFields = computed(() => {
     label: field
   })) : props.fields;
 })
+
+function onCheckAll() {
+  return props.items.map(item => item.selected = true);
+}
 </script>
 
 
