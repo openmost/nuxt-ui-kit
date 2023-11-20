@@ -95,13 +95,11 @@ const props = defineProps({
   },
 })
 
-const selected = computed(() => props.modelValue)
-
 const formCheckClass = computed(() => {
   return [
     !props.button ? 'form-check' : null,
     !props.button && props.variant ? 'form-switch' : null,
-    props.stacked ? null : 'form-check-inline',
+    props.stacked ? 'form-check-inline' : null,
     props.switch ? 'form-switch' : null
   ]
 })
@@ -123,3 +121,32 @@ function onChange(event) {
   emit('update:modelValue', event.target.checked);
 }
 </script>
+
+
+<style lang="scss">
+.form-check {
+  min-height: 20px;
+
+  .form-check-input:checked {
+    background-color: var(--bs-accent);
+    border-color: var(--bs-accent);
+  }
+
+  label {
+    margin-top: 2px;
+  }
+
+
+  &.form-switch {
+    min-height: 22px;
+
+    .form-check-input {
+      height: 22px;
+
+      &:checked {
+        background-color: var(--bs-accent);
+      }
+    }
+  }
+}
+</style>

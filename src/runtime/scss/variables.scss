@@ -9,6 +9,7 @@ $custom-colors: (
 
 $body-bg-dark: #161830;
 $surface: #1C1F41;
+$accent: #FFA32A;
 $body-color-dark: #fff;
 
 $primary: #426CDA;
@@ -61,6 +62,7 @@ $btn-border-radius: .5rem;
 $btn-border-width: 1px;
 $btn-font-size: 1rem;
 $btn-line-height: normal;
+$btn-disabled-opacity: 1;
 
 // Buttons LG
 $btn-padding-x-lg: 1.4375rem;
@@ -81,7 +83,12 @@ $card-spacer-x: 2rem;
 $card-title-spacer-y: 2rem;
 
 // Checkbox
-
+$form-check-input-border-radius: 6px;
+$form-check-input-width: 1.250rem;
+$form-check-padding-start: calc($form-check-input-width + .5rem);
+$form-check-margin-bottom: 0;
+$form-switch-width: 2.5rem;
+$form-switch-padding-start: 3.25rem;
 
 // Container
 $container-max-widths: (

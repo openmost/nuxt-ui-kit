@@ -8,7 +8,7 @@
     :to="to"
     :type="type"
   >
-    <div class="btn-inner-wrapper">
+    <div class="btn-inner-wrapper" v-if="$slots.icon">
 
       <slot name="icon" v-if="iconPosition === 'start'"/>
 
@@ -17,6 +17,9 @@
       <slot name="icon" v-if="iconPosition === 'end'"/>
 
     </div>
+
+    <slot v-else>{{ text }}</slot>
+
   </component>
 </template>
 
@@ -96,10 +99,14 @@ const buttonTag = computed(() => {
   }
 
 
-  &[disabled] {
+  &[disabled]:not([disabled=false]) {
     background-color: transparent;
     color: var(--bs-secondary);
-    border-color: currentColor;
+
+    &:not(.btn-circle),
+    &:not(.btn-transparent) {
+      border-color: currentColor;
+    }
   }
 
   &.btn-danger {

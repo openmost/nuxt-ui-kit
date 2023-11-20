@@ -1,5 +1,6 @@
 <template>
   <Button variant="outline-danger">
+
     <template #icon>
       <IconDelete/>
     </template>

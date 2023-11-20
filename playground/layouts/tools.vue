@@ -18,9 +18,3 @@
 
   </div>
 </template>
-
-<style lang="scss">
-#content {
-  padding-top: 136px;
-}
-</style>

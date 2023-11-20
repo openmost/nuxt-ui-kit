@@ -2,16 +2,22 @@
   <section>
     <SectionHeader title="Segments">
       <template #actions>
-        <Button variant="outline-primary">
-          <IconExport/>
+        <Button variant="outline-primary" to="/" disabled>
+          <template #icon>
+            <IconExport/>
+          </template>
           Export
         </Button>
-        <Button variant="outline-danger">
-          <IconDelete/>
+        <Button variant="outline-danger" disabled>
+          <template #icon>
+            <IconDelete/>
+          </template>
           Delete
         </Button>
-        <Button variant="primary">
-          <IconImport/>
+        <Button variant="transparent" to="/import" icon-position="end" disabled>
+          <template #icon>
+            <IconAngleRight/>
+          </template>
           Import
         </Button>
       </template>

@@ -41,12 +41,17 @@ function onInput() {
     background-color: transparent;
     padding-right: 0;
     color: var(--bs-body-color) !important;
+
+    svg {
+      width: 1.125rem;
+    }
   }
 
   .form-control {
     border-left: 0;
     color: var(--bs-body-color) !important;
     box-shadow: none;
+
   }
 }
 </style>

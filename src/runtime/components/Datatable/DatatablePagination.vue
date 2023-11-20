@@ -1,10 +1,10 @@
 <template>
   <div class="d-flex gap-2">
-    <Button variant="surface" circle aria-label="Previous page" :disabled="disabledPrevPage" @click="goToPreviousPage">
+    <Button class="datatable-pagination-button" variant="transparent" circle aria-label="Previous page" :disabled="disabledPrevPage" @click="goToPreviousPage">
       <IconAngleLeft/>
     </Button>
 
-    <Button variant="surface" circle aria-label="Next page" :disabled="disabledNextPage" @click="goToNextPage">
+    <Button class="datatable-pagination-button" variant="transparent" circle aria-label="Next page" :disabled="disabledNextPage" @click="goToNextPage">
       <IconAngleRight/>
     </Button>
   </div>
@@ -54,3 +54,12 @@ function goToNextPage() {
   emit('change', nextPageNumber.value);
 }
 </script>
+
+
+<style lang="scss">
+.datatable-pagination-button {
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 5px !important;
+}
+</style>

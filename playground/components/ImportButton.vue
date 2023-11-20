@@ -1,6 +1,8 @@
 <template>
   <Button :variant="variant">
-    <IconImport />
+    <template #icon>
+      <IconImport/>
+    </template>
     <slot>Import</slot>
   </Button>
 </template>

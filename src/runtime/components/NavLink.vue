@@ -66,6 +66,7 @@ const target = computed(() => {
   }
 
   svg {
+    transition: .2s ease all;
     width: 1.5rem;
     min-width: 1.5rem;
     height: 1.5rem;
