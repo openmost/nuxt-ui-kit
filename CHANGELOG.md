@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.29
+
+[compare changes](https://github.com/openmost/ui-kit/compare/v1.0.28...v1.0.29)
+
+### 🏡 Chore
+
+- **release:** V1.0.28 ([0e2fbf8](https://github.com/openmost/ui-kit/commit/0e2fbf8))
+
+### ❤️ Contributors
+
+- Ronan <ronan56.hello@gmail.com>
+
 ## v1.0.28
 
 [compare changes](https://github.com/openmost/ui-kit/compare/v1.0.27...v1.0.28)
