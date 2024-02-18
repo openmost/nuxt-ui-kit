@@ -8,13 +8,16 @@
         <template #icon>
           <IconCopy/>
         </template>
-        <span>Copy link</span>
+        <span>Copy URL</span>
       </Button>
     </template>
     <FormTextarea
       v-if="url"
       :rows="textareaRows"
       :value="url"
+      id="output-url"
+      name="output-url"
+      aria-label="Output URL"
     />
     <Alert v-else variant="danger">URL is missing</Alert>
   </ToolOutputCard>
