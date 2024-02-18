@@ -1,21 +1,21 @@
 <template>
   <div id="tool-content-layout" class="container">
 
-    <StickyWrapper v-if="$slots.menu">
+    <div class="tool-content-sticky">
       <div class="tool-menu">
         <slot name="menu"/>
       </div>
-    </StickyWrapper>
+    </div>
 
     <main class="tool-content">
       <slot/>
     </main>
 
-    <StickyWrapper v-if="$slots.output">
+    <div class="tool-content-sticky">
       <div class="tool-output">
         <slot name="output"/>
       </div>
-    </StickyWrapper>
+    </div>
 
   </div>
 </template>
@@ -39,6 +39,14 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+  }
+
+  .tool-menu,
+  .tool-output {
+    @media screen and (min-width: 1200px) {
+      position: sticky;
+      top: 132px;
+    }
   }
 
 
@@ -83,3 +91,5 @@
   }
 }
 </style>
+<script setup lang="ts">
+</script>

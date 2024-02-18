@@ -20,7 +20,7 @@
   </ToolOutputCard>
 </template>
 
-<script setup lang="ts">
+<script setup>
 
 const props = defineProps({
   url: {
@@ -44,7 +44,7 @@ function copyToClipboard() {
   textarea {
     background-color: var(--bs-surface);
     border-width: 0;
+    font-family: var(--bs-font-monospace, 'monospace');
   }
-
 }
 </style>

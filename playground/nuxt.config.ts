@@ -4,7 +4,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         "data-bs-theme": "dark"
       }
-    }
+    },
   },
   modules: ['../src/module'],
   openmostUiKit: {},

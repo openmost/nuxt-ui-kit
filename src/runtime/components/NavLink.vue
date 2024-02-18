@@ -3,10 +3,13 @@
     :class="navLinkClass"
     :disabled="disabled"
     :to="to"
+    :href="href"
     :external="external"
     :rel="rel"
-    active-class="active"
     :target="target"
+    active-class="active"
+    exact-active-class="active-exact"
+    :active="false"
   >
 
     <slot name="icon"/>
@@ -23,10 +26,24 @@ import {computed} from "vue";
 
 const props = defineProps({
   active: {
-    type: Boolean,
+    type: Boolean
+  },
+  activeClass: {
+    type: String,
+    default: 'active'
+  },
+  exactActive: {
+    type: Boolean
+  },
+  exactActiveClass: {
+    type: String,
+    default: 'active-exact'
   },
   disabled: {
     type: Boolean,
+  },
+  href: {
+    type: [String, Object],
   },
   to: {
     type: [String, Object],
@@ -34,13 +51,18 @@ const props = defineProps({
   external: {
     type: Boolean,
     default: false,
+  },
+  neverActive: {
+    type: Boolean,
   }
 })
 
 const navLinkClass = computed(() => {
   return [
     'nav-link',
-    props.active ? 'active' : false,
+    !props.neverActive && props.active ? props.activeClass : null,
+    !props.neverActive && props.exactActive ? props.exactActiveClass : null,
+    props.neverActive ? 'never-active' : null,
     props.external ? 'external-link' : null
   ];
 })
@@ -78,7 +100,7 @@ const target = computed(() => {
     }
   }
 
-  &.active svg {
+  &.active:not(.never-active) svg {
     &:not(.icon-arrow-top-right) {
       color: var(--bs-accent);
     }
@@ -106,7 +128,7 @@ const target = computed(() => {
     padding-left: 0.75rem;
   }
 
-  &.active {
+  &.active-exact:not(.never-active) {
     position: relative;
     padding-left: .75rem;
 

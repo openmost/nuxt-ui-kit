@@ -97,6 +97,6 @@
 }
 </style>
 
-<script setup lang="ts">
+<script setup>
 const date = new Date().getFullYear();
 </script>

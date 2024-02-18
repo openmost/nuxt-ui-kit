@@ -7,7 +7,7 @@
         <h2 class="h4">Getting started</h2>
 
         <Nav vertical anchor>
-          <NavItem :to="{path: '/tool', hash: '#test'}">Required parameters</NavItem>
+          <NavItem :to="{path: '/tool'}" never-active>Required parameters</NavItem>
           <NavItem :to="{path: '/tool', hash: '#demo'}">Optionals parameters</NavItem>
           <NavItem :to="{path: '/tool', hash: '#tututu'}">Seconds parameters</NavItem>
         </Nav>
