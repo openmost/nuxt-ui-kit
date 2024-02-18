@@ -1,6 +1,6 @@
 {
   "name": "@openmost/ui-kit",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "Openmost UI Kit for Nuxt",
   "repository": "openmost/ui-kit",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.8.1",
+    "@nuxt/kit": "^3.10.2",
     "bootstrap": "^5.3.2"
   },
   "devDependencies": {
